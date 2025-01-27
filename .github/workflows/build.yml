@@ -29,7 +29,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with: 
           name: "Chorizite.ACProtocol.${{ env.GitVersion_FullSemVer }}.nupkg"
-          path: "${{ github.workspace }}/bin/Release/Chorizite.ACProtocol.${{ env.GitVersion_FullSemVer }}.nupkg"
+          path: "${{ github.workspace }}/Chorizite.ACProtocol/bin/Release/Chorizite.ACProtocol.${{ env.GitVersion_FullSemVer }}.nupkg"
 
       - uses: actions/upload-artifact@v4
         with: 
@@ -39,5 +39,5 @@ jobs:
       - name: Push NuGet Package
         run: |
           dotnet nuget add source --username Chorizite --password ${{ secrets.CI_NUGET_API_KEY }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/Chorizite/index.json"
-          dotnet nuget push "${{ github.workspace }}/Chorizite.ACProtocol/Chorizite.ACProtocol/bin/Release/Chorizite.ACProtocol.${{ env.GitVersion_FullSemVer }}.nupkg" --api-key ${{ secrets.CI_NUGET_API_KEY }} --source "github"
+          dotnet nuget push "${{ github.workspace }}/Chorizite.ACProtocol/bin/Release/Chorizite.ACProtocol.${{ env.GitVersion_FullSemVer }}.nupkg" --api-key ${{ secrets.CI_NUGET_API_KEY }} --source "github"
       
