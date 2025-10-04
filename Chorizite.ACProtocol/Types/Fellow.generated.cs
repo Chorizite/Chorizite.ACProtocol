@@ -106,7 +106,7 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(CurrentStamina);
             writer.Write(CurrentMana);
             writer.Write(ShareLoot);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
         }
 
     }

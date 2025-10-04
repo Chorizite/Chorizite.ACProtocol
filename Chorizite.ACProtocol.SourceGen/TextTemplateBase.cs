@@ -606,7 +606,12 @@ namespace Chorizite.ACProtocol.SourceGen {
                     }
                 }
                 else if (string.IsNullOrEmpty(pre)) {
-                    WriteLine($"writer.Write({member.Name});");
+                    if (member.MemberType == "string") {
+                        WriteLine($"writer.WriteString16L({member.Name});");
+                    }
+                    else {
+                        WriteLine($"writer.Write({member.Name});");
+                    }
                 }
                 else if (member.Parent?.GetType() == typeof(ACVector) && member.Parent?.Children?.Count > 1) {
                     WriteLine($"writer.Write({pre}{member.Name});");

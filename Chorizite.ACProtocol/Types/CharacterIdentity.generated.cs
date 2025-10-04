@@ -52,7 +52,7 @@ namespace Chorizite.ACProtocol.Types {
         /// </summary>
         public void Write(BinaryWriter writer) {
             writer.Write(CharacterId);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.Write(SecondsGreyedOut);
             if ((writer.BaseStream.Position % 4) != 0) {
                 writer.BaseStream.Position += 4 - (writer.BaseStream.Position % 4);

@@ -54,8 +54,8 @@ namespace Chorizite.ACProtocol.Messages.S2C {
         /// </summary>
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
-            writer.Write(Message);
-            writer.Write(SenderName);
+            writer.WriteString16L(Message);
+            writer.WriteString16L(SenderName);
             writer.Write(SenderId);
             writer.Write((uint)Type);
         }

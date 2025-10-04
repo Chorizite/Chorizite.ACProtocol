@@ -44,10 +44,10 @@ namespace Chorizite.ACProtocol.Messages.C2S.Actions {
             base.Write(writer);
             writer.Write(Context);
             writer.Write(Success);
-            writer.Write(PluginName);
-            writer.Write(PluginAuthor);
-            writer.Write(PluginEmail);
-            writer.Write(PluginWebpage);
+            writer.WriteString16L(PluginName);
+            writer.WriteString16L(PluginAuthor);
+            writer.WriteString16L(PluginEmail);
+            writer.WriteString16L(PluginWebpage);
         }
 
     }

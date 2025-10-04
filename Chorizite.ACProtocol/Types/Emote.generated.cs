@@ -318,7 +318,7 @@ namespace Chorizite.ACProtocol.Types {
                 case 0x53:
                 case 0x58:
                 case 0x79:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     break;
                 case 0x20:
                 case 0x21:
@@ -335,7 +335,7 @@ namespace Chorizite.ACProtocol.Types {
                 case 0x6B:
                 case 0x6C:
                 case 0x6D:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     writer.Write(Amount);
                     break;
                 case 0x35:
@@ -356,7 +356,7 @@ namespace Chorizite.ACProtocol.Types {
                 case 0x3B:
                 case 0x47:
                 case 0x52:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     writer.Write(Min);
                     writer.Write(Max);
                     break;
@@ -388,7 +388,7 @@ namespace Chorizite.ACProtocol.Types {
                     CProfile.Write(writer);
                     break;
                 case 0x4C:
-                    writer.Write(Msg);
+                    writer.WriteString16L(Msg);
                     CProfile.Write(writer);
                     break;
                 case 0x38:
@@ -426,13 +426,13 @@ namespace Chorizite.ACProtocol.Types {
                 case 0x23:
                 case 0x2D:
                 case 0x2E:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     writer.Write(Stat);
                     break;
                 case 0x26:
                 case 0x4B:
-                    writer.Write(Message);
-                    writer.Write(TestString);
+                    writer.WriteString16L(Message);
+                    writer.WriteString16L(TestString);
                     writer.Write(Stat);
                     break;
                 case 0x24:
@@ -442,19 +442,19 @@ namespace Chorizite.ACProtocol.Types {
                 case 0x2A:
                 case 0x2B:
                 case 0x2C:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     writer.Write(Min);
                     writer.Write(Max);
                     writer.Write(Stat);
                     break;
                 case 0x72:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     writer.Write(Min64);
                     writer.Write(Max64);
                     writer.Write(Stat);
                     break;
                 case 0x25:
-                    writer.Write(Message);
+                    writer.WriteString16L(Message);
                     writer.Write(FMin);
                     writer.Write(FMax);
                     writer.Write(Stat);

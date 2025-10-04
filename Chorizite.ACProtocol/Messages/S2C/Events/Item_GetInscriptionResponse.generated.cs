@@ -39,9 +39,9 @@ namespace Chorizite.ACProtocol.Messages.S2C.Events {
         /// </summary>
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
-            writer.Write(Inscription);
-            writer.Write(ScribeName);
-            writer.Write(ScribeAccount);
+            writer.WriteString16L(Inscription);
+            writer.WriteString16L(ScribeName);
+            writer.WriteString16L(ScribeAccount);
         }
 
     }

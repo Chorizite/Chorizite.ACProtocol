@@ -50,7 +50,7 @@ namespace Chorizite.ACProtocol.Messages.S2C {
             base.Write(writer);
             writer.Write(Connections);
             writer.Write(MaxConnections);
-            writer.Write(WorldName);
+            writer.WriteString16L(WorldName);
         }
 
     }

@@ -64,9 +64,9 @@ namespace Chorizite.ACProtocol.Messages.S2C.Events {
             writer.Write(BookId);
             writer.Write(MaxNumPages);
             PageData.Write(writer);
-            writer.Write(Inscription);
+            writer.WriteString16L(Inscription);
             writer.Write(ScribeId);
-            writer.Write(ScribeName);
+            writer.WriteString16L(ScribeName);
         }
 
     }

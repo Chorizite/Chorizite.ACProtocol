@@ -65,7 +65,7 @@ namespace Chorizite.ACProtocol.Messages.S2C {
             switch((int)ResponseType) {
                 case 0x1:
                     writer.Write(CharacterId);
-                    writer.Write(Name);
+                    writer.WriteString16L(Name);
                     writer.Write(SecondsUntilDeletion);
                     if ((writer.BaseStream.Position % 4) != 0) {
                         writer.BaseStream.Position += 4 - (writer.BaseStream.Position % 4);

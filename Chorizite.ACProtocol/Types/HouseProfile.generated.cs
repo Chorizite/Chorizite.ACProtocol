@@ -93,7 +93,7 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(MaxAllegRank);
             writer.Write(MaintenanceFree);
             writer.Write((uint)Type);
-            writer.Write(OwnerName);
+            writer.WriteString16L(OwnerName);
             writer.WritePackableList(Buy);
             writer.WritePackableList(Rent);
         }

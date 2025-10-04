@@ -156,7 +156,7 @@ namespace Chorizite.ACProtocol.Types {
         /// Writes instance data to a binary writer
         /// </summary>
         public void Write(BinaryWriter writer) {
-            writer.Write(Account);
+            writer.WriteString16L(Account);
             writer.Write(One);
             writer.Write((byte)HeritageGroup);
             writer.Write((byte)Gender);
@@ -190,7 +190,7 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(Slot);
             writer.Write(ClassId);
             writer.WritePackableList(Skills);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.Write(StartArea);
             writer.Write(IsAdmin);
             writer.Write(IsEnvoy);

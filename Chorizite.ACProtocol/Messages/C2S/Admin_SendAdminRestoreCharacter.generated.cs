@@ -48,8 +48,8 @@ namespace Chorizite.ACProtocol.Messages.C2S {
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
             writer.Write(ObjectId);
-            writer.Write(RestoredCharName);
-            writer.Write(AccountToRestoreTo);
+            writer.WriteString16L(RestoredCharName);
+            writer.WriteString16L(AccountToRestoreTo);
         }
 
     }

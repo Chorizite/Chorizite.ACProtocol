@@ -75,19 +75,19 @@ namespace Chorizite.ACProtocol.Types {
         /// Writes instance data to a binary writer
         /// </summary>
         public void Write(BinaryWriter writer) {
-            writer.Write(ClientVersion);
+            writer.WriteString16L(ClientVersion);
             writer.Write(Length);
             writer.Write((uint)AuthType);
             writer.Write((uint)Flags);
             writer.Write(Sequence);
-            writer.Write(Account);
-            writer.Write(AccountToLoginAs);
+            writer.WriteString16L(Account);
+            writer.WriteString16L(AccountToLoginAs);
             switch((int)AuthType) {
                 case 0x00000002:
                     writer.Write(Password);
                     break;
                 case 0x40000002:
-                    writer.Write(GlsTicket);
+                    writer.WriteString16L(GlsTicket);
                     break;
             }
         }

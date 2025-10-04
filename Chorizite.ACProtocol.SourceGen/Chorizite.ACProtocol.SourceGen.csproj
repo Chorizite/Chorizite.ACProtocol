@@ -4,7 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>12</LangVersion>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	  <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.CodeDom" Version="9.0.0" />

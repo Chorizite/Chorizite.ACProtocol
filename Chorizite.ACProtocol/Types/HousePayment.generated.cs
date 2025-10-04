@@ -63,8 +63,8 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(Required);
             writer.Write(Paid);
             writer.Write(WeenieClassId);
-            writer.Write(Name);
-            writer.Write(PluralName);
+            writer.WriteString16L(Name);
+            writer.WriteString16L(PluralName);
         }
 
     }

@@ -44,7 +44,7 @@ namespace Chorizite.ACProtocol.Messages.S2C.Events {
             base.Write(writer);
             writer.Write((uint)ConfirmationType);
             writer.Write(ContextId);
-            writer.Write(Text);
+            writer.WriteString16L(Text);
         }
 
     }

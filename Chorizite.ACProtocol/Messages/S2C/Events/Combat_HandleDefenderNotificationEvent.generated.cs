@@ -66,7 +66,7 @@ namespace Chorizite.ACProtocol.Messages.S2C.Events {
         /// </summary>
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
-            writer.Write(AttackerName);
+            writer.WriteString16L(AttackerName);
             writer.Write((uint)Type);
             writer.Write(DamagePercent);
             writer.Write(Damage);

@@ -44,7 +44,7 @@ namespace Chorizite.ACProtocol.Messages.C2S.Actions {
             base.Write(writer);
             writer.Write(ObjectId);
             writer.Write(PageNum);
-            writer.Write(PageText);
+            writer.WriteString16L(PageText);
         }
 
     }

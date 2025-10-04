@@ -86,7 +86,7 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(SellPrice);
             writer.Write(CurrencyId);
             writer.Write(CurrencyAmount);
-            writer.Write(CurrencyName);
+            writer.WriteString16L(CurrencyName);
         }
 
     }

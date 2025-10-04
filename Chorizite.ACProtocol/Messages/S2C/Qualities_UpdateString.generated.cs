@@ -63,7 +63,7 @@ namespace Chorizite.ACProtocol.Messages.S2C {
             if ((writer.BaseStream.Position % 4) != 0) {
                 writer.BaseStream.Position += 4 - (writer.BaseStream.Position % 4);
             }
-            writer.Write(Value);
+            writer.WriteString16L(Value);
         }
 
     }

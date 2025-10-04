@@ -115,7 +115,7 @@ namespace Chorizite.ACProtocol.Types {
                 case 0x24:
                 case 0x25:
                 case 0x26:
-                    writer.Write(Quest);
+                    writer.WriteString16L(Quest);
                     break;
                 case 0x02:
                     writer.Write(VendorType);
