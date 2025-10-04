@@ -46,7 +46,7 @@ namespace Chorizite.ACProtocol.Types {
         /// </summary>
         public void Write(BinaryWriter writer) {
             writer.WritePackableList(Filters);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.Write(Account);
         }
 

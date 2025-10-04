@@ -57,13 +57,13 @@ namespace Chorizite.ACProtocol.Types {
         /// </summary>
         public void Write(BinaryWriter writer) {
             writer.Write(AuthorId);
-            writer.Write(AuthorName);
-            writer.Write(AuthorAccount);
+            writer.WriteString16L(AuthorName);
+            writer.WriteString16L(AuthorAccount);
             writer.Write(Version);
             writer.Write(TextIncluded);
             writer.Write(IgnoreAuthor);
             if (TextIncluded) {
-                writer.Write(PageText);
+                writer.WriteString16L(PageText);
             }
         }
 

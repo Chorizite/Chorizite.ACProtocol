@@ -43,7 +43,7 @@ namespace Chorizite.ACProtocol.Types {
         /// </summary>
         public void Write(BinaryWriter writer) {
             writer.Write(HasStoragePermission);
-            writer.Write(GuestName);
+            writer.WriteString16L(GuestName);
         }
 
     }

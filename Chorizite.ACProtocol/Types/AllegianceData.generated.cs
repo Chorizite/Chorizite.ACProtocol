@@ -119,7 +119,7 @@ namespace Chorizite.ACProtocol.Types {
                 writer.Write(TimeOnline);
                 writer.Write(AllegianceAge);
             }
-            writer.Write(Name);
+            writer.WriteString16L(Name);
         }
 
     }

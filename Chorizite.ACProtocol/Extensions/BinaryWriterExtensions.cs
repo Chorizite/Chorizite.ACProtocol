@@ -8,6 +8,14 @@ using Chorizite.ACProtocol.Types;
 
 namespace Chorizite.ACProtocol.Extensions {
     public static class BinaryWriterExtensions {
+        public static void WriteString16L(this BinaryWriter writer, string value) {
+            writer.Write((short)value.Length);
+            writer.Write(value.ToCharArray());
+            int pad = value.Length + 2 & 3;
+            if (pad > 0)
+                writer.Seek(4 - pad, SeekOrigin.Current);
+        }
+
         public static void WritePackableList<T>(this BinaryWriter writer, List<T> value) {
             writer.Write(value.Count);
             for (var i = 0; i < value.Count; i++) {

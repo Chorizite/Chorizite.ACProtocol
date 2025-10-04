@@ -37,7 +37,7 @@ namespace Chorizite.ACProtocol.Messages.S2C.Events {
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
             writer.Write((uint)Channel);
-            writer.Write(Message);
+            writer.WriteString16L(Message);
         }
 
     }

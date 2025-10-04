@@ -50,7 +50,7 @@ namespace Chorizite.ACProtocol.Messages.C2S.Actions {
             base.Write(writer);
             writer.Write(Add);
             writer.Write(ObjectId);
-            writer.Write(CharacterName);
+            writer.WriteString16L(CharacterName);
             writer.Write((uint)Type);
         }
 

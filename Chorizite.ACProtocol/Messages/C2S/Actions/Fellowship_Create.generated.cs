@@ -36,7 +36,7 @@ namespace Chorizite.ACProtocol.Messages.C2S.Actions {
         /// </summary>
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.Write(ShareXP);
         }
 

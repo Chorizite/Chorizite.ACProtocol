@@ -33,7 +33,7 @@ namespace Chorizite.ACProtocol.Types {
         /// Writes instance data to a binary writer
         /// </summary>
         public void Write(BinaryWriter writer) {
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.Write(BookieId);
         }
 

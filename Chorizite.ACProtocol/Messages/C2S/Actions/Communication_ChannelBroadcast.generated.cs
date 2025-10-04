@@ -43,8 +43,8 @@ namespace Chorizite.ACProtocol.Messages.C2S.Actions {
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
             writer.Write((uint)Channel);
-            writer.Write(SenderName);
-            writer.Write(Message);
+            writer.WriteString16L(SenderName);
+            writer.WriteString16L(Message);
         }
 
     }

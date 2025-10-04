@@ -67,7 +67,7 @@ namespace Chorizite.ACProtocol.Messages.S2C {
             writer.WritePackableList(Characters);
             writer.WritePackableList(DeletedCharacters);
             writer.Write(NumAllowedCharacters);
-            writer.Write(Account);
+            writer.WriteString16L(Account);
             writer.Write(UseTurbineChat);
             writer.Write(HasThroneofDestiny);
         }

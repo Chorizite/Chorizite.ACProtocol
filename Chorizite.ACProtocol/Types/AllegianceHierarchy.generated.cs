@@ -149,11 +149,11 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(MonarchBroadcastsToday);
             writer.Write(SpokesBroadcastTime);
             writer.Write(SpokesBroadcastsToday);
-            writer.Write(Motd);
-            writer.Write(MotdSetBy);
+            writer.WriteString16L(Motd);
+            writer.WriteString16L(MotdSetBy);
             writer.Write(ChatRoomId);
             Bindpoint.Write(writer);
-            writer.Write(AllegianceName);
+            writer.WriteString16L(AllegianceName);
             writer.Write(NameLastSetTime);
             writer.Write(IsLocked);
             writer.Write(ApprovedVassal);

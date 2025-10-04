@@ -48,7 +48,7 @@ namespace Chorizite.ACProtocol.Types {
             writer.Write(FriendId);
             writer.Write(Online);
             writer.Write(AppearOffline);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.WritePackableList(OutFriends);
             writer.WritePackableList(InFriends);
         }

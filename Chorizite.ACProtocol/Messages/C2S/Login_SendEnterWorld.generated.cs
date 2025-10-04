@@ -42,7 +42,7 @@ namespace Chorizite.ACProtocol.Messages.C2S {
         public override void Write(BinaryWriter writer) {
             base.Write(writer);
             writer.Write(CharacterId);
-            writer.Write(Account);
+            writer.WriteString16L(Account);
         }
 
     }

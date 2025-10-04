@@ -312,13 +312,13 @@ namespace Chorizite.ACProtocol.Types {
         /// </summary>
         public void Write(BinaryWriter writer) {
             writer.Write(Header);
-            writer.Write(Name);
+            writer.WriteString16L(Name);
             writer.Write(WeenieClassId);
             writer.Write(Icon);
             writer.Write((uint)Type);
             writer.Write((uint)Bitfield);
             if (((uint)Header & (uint)0x00000001) != 0) {
-                writer.Write(PluralName);
+                writer.WriteString16L(PluralName);
             }
             if (((uint)Header & (uint)0x00000002) != 0) {
                 writer.Write(ItemsCapacity);
